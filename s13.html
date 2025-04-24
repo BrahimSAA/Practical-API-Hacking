@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TCM - Practical API Hacking</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin: 20px auto;
+        }
+        .drive-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+<nav class="wrapper">
+<i class="fa-solid fa-angle-left arrow" id="left"></i>
+<ul class="carousel">
+<!-- Navigation items will be inserted here -->
+<li class="card"><a href="s1.html">1-Welcome to the Course</a></li>
+<li class="card"><a href="s2.html">2-Introduction</a></li>
+<li class="card"><a href="s3.html">3-Las Setup</a></li>
+<li class="card"><a href="s4.html">4-Enumerating APIs</a></li>
+<li class="card"><a href="s5.html">5-Attacking Authorization</a></li>
+<li class="card"><a href="s6.html">6-Attacking Authentification</a></li>
+<li class="card"><a href="s7.html">7-Injection</a></li>
+<li class="card"><a href="s8.html">8-Mid-course Capstone</a></li>
+<li class="card"><a href="s9.html">9-Mass Assignment</a></li>
+<li class="card"><a href="s10.html">10-Excessive Data Exposure</a></li>
+<li class="card"><a href="s11.html">11-SSRF - Server-side Request Forgery</a></li>
+<li class="card"><a href="s12.html">12-Chaining Vulnerabilities</a></li>
+<li class="card" id="actuel"><a href="s13.html">13-Final Capstone</a></li></ul>
+<i class="fa-solid fa-angle-right arrow" id="right"></i>
+</nav>
+</header>
+<!-- Navigation buttons -->
+<button class="arrow-button" id="left-arrow" onclick="navigate('s12.html')">←</button>
+<main>
+<!-- Video sections will be inserted here -->
+
+<section class="section" id="section45">
+<h2 class="video-title">1-Final Capstone Challenge</h2>
+<div class="video-container">
+<iframe allow="autoplay" allowfullscreen="" class="drive-iframe" src="https://drive.google.com/file/d/1zJPiq5mxuDhW3xUA3_vK43ngjrd5vYPT/preview">
+</iframe>
+</div>
+<button class="complete-btn">Mark as Complete</button>
+<button class="unmark-btn">Unmark</button>
+<button onclick="navigateToSection('prev', 44)">Previous Video</button>
+<button onclick="navigateToSection('next', 44)">Next Video</button>
+<textarea class="notes-input" id="notes45" placeholder="Write your notes here..."></textarea>
+</section>
+<section class="section" id="section46">
+<h2 class="video-title">2-Challenge Solution</h2>
+<div class="video-container">
+<iframe allow="autoplay" allowfullscreen="" class="drive-iframe" src="https://drive.google.com/file/d/1Zll4_-57_pFs4v45xF-KaGRgN27QinL5/preview">
+</iframe>
+</div>
+<button class="complete-btn">Mark as Complete</button>
+<button class="unmark-btn">Unmark</button>
+<button onclick="navigateToSection('prev', 45)">Previous Video</button>
+<button onclick="navigateToSection('next', 45)">Next Video</button>
+<textarea class="notes-input" id="notes46" placeholder="Write your notes here..."></textarea>
+</section>
+<section class="section" id="section47">
+<h2 class="video-title">3-Congratulation &amp; Thank You</h2>
+<div class="video-container">
+<iframe allow="autoplay" allowfullscreen="" class="drive-iframe" src="https://drive.google.com/file/d/1dR2TgqaiRjtT1Eiy3mLdS9vvJ3cFj8ZK/preview">
+</iframe>
+</div>
+<button class="complete-btn">Mark as Complete</button>
+<button class="unmark-btn">Unmark</button>
+<button onclick="navigateToSection('prev', 46)">Previous Video</button>
+<button onclick="navigateToSection('next', 46)">Next Video</button>
+<textarea class="notes-input" id="notes47" placeholder="Write your notes here..."></textarea>
+</section>
+</main>
+<!-- Footer elements -->
+<button id="backToTop" style="display: none;">Top</button>
+<button id="exportButton">Export</button>
+<input accept=".json" id="importButton" type="file"/>
+<button id="importDataButton">Import</button>
+<script src="script.js"></script>
+</body>
+</html>

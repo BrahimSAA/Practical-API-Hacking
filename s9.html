@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TCM - Practical API Hacking</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin: 20px auto;
+        }
+        .drive-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+<nav class="wrapper">
+<i class="fa-solid fa-angle-left arrow" id="left"></i>
+<ul class="carousel">
+<!-- Navigation items will be inserted here -->
+<li class="card"><a href="s1.html">1-Welcome to the Course</a></li>
+<li class="card"><a href="s2.html">2-Introduction</a></li>
+<li class="card"><a href="s3.html">3-Las Setup</a></li>
+<li class="card"><a href="s4.html">4-Enumerating APIs</a></li>
+<li class="card"><a href="s5.html">5-Attacking Authorization</a></li>
+<li class="card"><a href="s6.html">6-Attacking Authentification</a></li>
+<li class="card"><a href="s7.html">7-Injection</a></li>
+<li class="card"><a href="s8.html">8-Mid-course Capstone</a></li>
+<li class="card" id="actuel"><a href="s9.html">9-Mass Assignment</a></li>
+<li class="card"><a href="s10.html">10-Excessive Data Exposure</a></li>
+<li class="card"><a href="s11.html">11-SSRF - Server-side Request Forgery</a></li>
+<li class="card"><a href="s12.html">12-Chaining Vulnerabilities</a></li>
+<li class="card"><a href="s13.html">13-Final Capstone</a></li></ul>
+<i class="fa-solid fa-angle-right arrow" id="right"></i>
+</nav>
+</header>
+<!-- Navigation buttons -->
+<button class="arrow-button" id="left-arrow" onclick="navigate('s8.html')">←</button>
+<button class="arrow-button" id="right-arrow" onclick="navigate('s10.html')">→</button>
+<main>
+<!-- Video sections will be inserted here -->
+
+<section class="section" id="section33">
+<h2 class="video-title">1-Introduction to Mass Assignment</h2>
+<div class="video-container">
+<iframe allow="autoplay" allowfullscreen="" class="drive-iframe" src="https://drive.google.com/file/d/1C59Q5AZaQ7JKMmISJcgGwUTPMXK_3Pxg/preview">
+</iframe>
+</div>
+<button class="complete-btn">Mark as Complete</button>
+<button class="unmark-btn">Unmark</button>
+<button onclick="navigateToSection('prev', 32)">Previous Video</button>
+<button onclick="navigateToSection('next', 32)">Next Video</button>
+<textarea class="notes-input" id="notes33" placeholder="Write your notes here..."></textarea>
+</section>
+<section class="section" id="section34">
+<h2 class="video-title">2-Code Walkthrough</h2>
+<div class="video-container">
+<iframe allow="autoplay" allowfullscreen="" class="drive-iframe" src="https://drive.google.com/file/d/18_uO7PvfFKeIcnSSAi0gpgllgEvf2YLC/preview">
+</iframe>
+</div>
+<button class="complete-btn">Mark as Complete</button>
+<button class="unmark-btn">Unmark</button>
+<button onclick="navigateToSection('prev', 33)">Previous Video</button>
+<button onclick="navigateToSection('next', 33)">Next Video</button>
+<textarea class="notes-input" id="notes34" placeholder="Write your notes here..."></textarea>
+</section>
+<section class="section" id="section35">
+<h2 class="video-title">3-Mass Assignment Lab</h2>
+<div class="video-container">
+<iframe allow="autoplay" allowfullscreen="" class="drive-iframe" src="https://drive.google.com/file/d/1D31jDQ_WkE5q_I1yRdqAfK1vX8w_PTq-/preview">
+</iframe>
+</div>
+<button class="complete-btn">Mark as Complete</button>
+<button class="unmark-btn">Unmark</button>
+<button onclick="navigateToSection('prev', 34)">Previous Video</button>
+<button onclick="navigateToSection('next', 34)">Next Video</button>
+<textarea class="notes-input" id="notes35" placeholder="Write your notes here..."></textarea>
+</section>
+<section class="section" id="section36">
+<h2 class="video-title">4-Challenge Solution</h2>
+<div class="video-container">
+<iframe allow="autoplay" allowfullscreen="" class="drive-iframe" src="https://drive.google.com/file/d/1LvgsOKAR2kULXeVGyrIWhFw1OUzh_uaV/preview">
+</iframe>
+</div>
+<button class="complete-btn">Mark as Complete</button>
+<button class="unmark-btn">Unmark</button>
+<button onclick="navigateToSection('prev', 35)">Previous Video</button>
+<button onclick="navigateToSection('next', 35)">Next Video</button>
+<textarea class="notes-input" id="notes36" placeholder="Write your notes here..."></textarea>
+</section>
+</main>
+<!-- Footer elements -->
+<button id="backToTop" style="display: none;">Top</button>
+<button id="exportButton">Export</button>
+<input accept=".json" id="importButton" type="file"/>
+<button id="importDataButton">Import</button>
+<script src="script.js"></script>
+</body>
+</html>
