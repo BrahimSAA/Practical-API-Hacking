@@ -232,17 +232,28 @@ document.getElementById('importButton').addEventListener('change', function(even
                 // Parse the JSON data from the file
                 const jsonData = JSON.parse(e.target.result);
 
-                // Loop through the parsed data and store it in localStorage
+                // Loop through the parsed data
                 for (const key in jsonData) {
                     if (jsonData.hasOwnProperty(key)) {
-                        localStorage.setItem(key, JSON.stringify(jsonData[key]));
+                        if (key.startsWith('notes-')) {
+                            // For notes, replace escaped newlines with actual newlines
+                            const notesValue = jsonData[key];
+                            const formattedNotes = typeof notesValue === 'string' ? 
+                                notesValue.replace(/\\n/g, '\n') : 
+                                notesValue;
+                            localStorage.setItem(key, formattedNotes);
+                        } else {
+                            // For other data (completion status), store as-is
+                            localStorage.setItem(key, jsonData[key]);
+                        }
                     }
                 }
 
-                alert('Data imported successfully to localStorage!');
+                alert('Data imported successfully!');
                 location.reload(); // Refresh to show changes
             } catch (error) {
-                alert('Error parsing JSON file');
+                console.error('Error importing data:', error);
+                alert('Error importing data. Please check the console for details.');
             }
         };
 
